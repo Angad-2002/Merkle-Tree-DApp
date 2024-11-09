@@ -78,6 +78,35 @@ The frontend is built with React and provides the following main functionalities
 
 The frontend includes a manual verification function, `verifyMerkleProof`, which checks if a given transaction hash is part of the Merkle tree using the proof. This function hashes the transaction hash with each proof element and compares the final result to the Merkle root.
 
+## Examples
+
+### Example 1: Fetching the Merkle Root
+
+Once the DApp is running, click on the **"Fetch Merkle Root from Contract"** button to retrieve the current Merkle root stored on the contract. This value is displayed in the interface.
+
+### Example 2: Setting a New Merkle Root
+
+If you are the contract owner, enter a new Merkle root in the input field and click **"Set Merkle Root"**. This will update the Merkle root stored on the smart contract.
+
+### Example 3: Verifying Transaction Inclusion
+
+To verify whether a transaction is part of the Merkle tree, you can use the following example data:
+
+- **Transaction Hash**:
+    ```
+    0xff25d5a5579ba5a54d447b5ac014939911c02e26a4c52be56b1b8dceb3d11c06
+    ```
+
+- **Proof Array**:
+    ```
+    0x4e644d03a31e9dd080aaa1869d608e11683046c7769652541e99aee106d4b1e6,
+    0x754ef0c0b5e09d3578093248a6a8fac69c8bfd24b6a8314794b851b85a18b910,
+    0xb981523bbcc911764d10413dd55cdf89ce96c6737c53d1464f02ee1e60c8e1e1,
+    0xe0f612d4513ed502f81749d0e3a472b313b6dea9d17cb48c82110ee280047520
+    ```
+
+- After entering the **Transaction Hash** and **Proof Array**, click on **"Verify Transaction Inclusion"**. The DApp will display whether the transaction is verified as part of the Merkle tree.
+
 ## Screenshots
 
 ### DApp Interface
